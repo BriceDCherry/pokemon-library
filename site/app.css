@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    background-color: yellow;
+    font-family: 'Press Start 2P';
+}
+
 .spinner {
    width: 100px; 
 }
@@ -10,13 +17,37 @@ header {
     text-align: center;
 }
 
+h1 {
+    text-align: center;
+}
+
 h2 {
     text-align: center;
 }
 
-li {
+
+
+figure {
+    text-align: center;
+}
+
+.abilities {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+    margin: 15px;
+    list-style: none;
 }
+
+.pokemon-detail figcaption {
+    font-weight: bold;
+}
+
+.ability-name {
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+
