@@ -9,13 +9,6 @@ function addPokemonImage(pokemon) {
         <img src="${pokemon.sprites.front_default}" alt="${name}"/>
         <figcaption><a href="pokemon.html?pokemon=${pokemon.id}">${name}</a></figcaption>
     </figure>`
-    
-
-    /* `
-        // <figcaption><a href="pokemon.html?pokemon=${pokemon.name}">
-        //     <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}"/>
-        // </a></figcaption>
-    ` */
     main.append(div)
 }
 
@@ -35,37 +28,3 @@ fetch(url)
     })
 
 document.querySelector("h1").textConent = "Pokemon!"
-
-
-
-
-
-
-
-
-
-
-/*const url = "https://pokeapi.co/api/v2/pokemon?limit=50"
-fetch(url)
-    .then((response) => response.json())
-    .then((response) => {
-        const pokemonList = response.results;
-        const httpRequests = pokemonList
-            .map(pokemon => pokemon.url)
-            .map(url => {
-                return fetch(url).then(response => response.json())
-            })
-
-        return Promise.all(httpRequests)
-    }).then(responses => {
-        responses.map(response => {
-            const li = document.createElement("li")
-            const img = document.createElement("img")
-            img.src = response.sprites.front_default
-            spinner.classList.add("hidden")
-            li.append(img)
-            return li
-        }).forEach(li => {
-            ul.append(li)
-        })
-    })  */
